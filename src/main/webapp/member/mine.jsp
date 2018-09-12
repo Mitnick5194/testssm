@@ -10,6 +10,14 @@
 	<h1>${msg }</h1>
 	if you see this page the spring-mvc had runned;
 	
+	<form action="addMember.do">
+	名字	<input type="text" name="name" /><br>
+	id	<input type="text" name="id" /><br>
+	年龄	<input type="text" name="age"/><br>
+	额外信息	<input type="text" name="extract"/><br>
+		<input type="submit" value="提交"/>
+	</form>
+	
 	<br><br>
 	<button class="getBtn" id="mGetBtn" data-id="10">点我</button>
 	

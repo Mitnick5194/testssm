@@ -5,6 +5,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 import com.ajie.mapper.MemberMapper;
+import com.ajie.member.MemberInter;
 import com.ajie.member.MemberService;
 import com.ajie.pojo.Member;
 
@@ -21,6 +22,14 @@ public class MemberServiceImpl implements MemberService {
 	public Member getMemberById(int id) {
 		Member member = memberMapper.selectByPrimaryKey(id);
 		return member;
+	}
+
+	public void insertMember(MemberInter mem) {
+		Member member = null;
+		if (mem instanceof Member) {
+			member = (Member) mem;
+		}
+		memberMapper.insert(member);
 	}
 
 }

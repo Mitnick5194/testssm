@@ -1,14 +1,16 @@
 package com.ajie.pojo;
 
+import com.ajie.member.MemberInter;
 
-public class Member  {
-
+public class Member implements MemberInter {
 
 	private Integer id;
 
 	private String name;
 
 	private Integer age;
+
+	private String extra;
 
 	public Integer getId() {
 		return id;
@@ -32,5 +34,14 @@ public class Member  {
 
 	public void setAge(Integer age) {
 		this.age = age;
+	}
+
+
+	public String extra() {
+		return extra;
+	}
+
+	public void setExtra(String extra) {
+		this.extra = extra;
 	}
 }
